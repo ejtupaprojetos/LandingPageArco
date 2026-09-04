@@ -1,0 +1,1 @@
+Aqui ficam as coisas responsaveis por comunicacao com servicos externos/APIs.

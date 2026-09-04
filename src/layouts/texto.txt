@@ -1,0 +1,1 @@
+aqui ficam estruturas que se repetem entre as paginas.
