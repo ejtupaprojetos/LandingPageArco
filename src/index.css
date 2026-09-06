@@ -1,6 +1,4 @@
-/* ===========================================================
-   Design tokens da ARCO — extraídos do protótipo (Home.pdf)
-   =========================================================== */
+
 :root {
   --color-dark: #15151f;
   --color-yellow: #f2c230;
@@ -21,9 +19,7 @@
   --font-base: 'Segoe UI', Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* Reset básico — o template do Vite vem com estilos pensados para a
-   telinha padrão do contador (body em flex/centralizado). Removemos
-   isso aqui para a landing page ocupar a largura toda. */
+/* resets */
 * {
   box-sizing: border-box;
 }
@@ -45,9 +41,7 @@ img {
   display: block;
 }
 
-/* ===========================================================
-   Utilitários reaproveitados por vários componentes
-   =========================================================== */
+/* utilitarios comuns em todas as pages*/
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
