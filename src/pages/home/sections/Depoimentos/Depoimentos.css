@@ -1,0 +1,41 @@
+.depoimentos {
+  padding: 4rem 0;
+  background-color: var(--color-gray-bg);
+  text-align: center;
+}
+
+.depoimentos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+.depoimento-card {
+  background-color: #fff;
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  margin: 0;
+  border-left: 4px solid var(--color-orange);
+}
+
+.depoimento-card p {
+  margin: 0 0 1.25rem;
+  color: var(--color-text-dark);
+  font-style: italic;
+}
+
+.depoimento-card footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.depoimento-card strong {
+  color: var(--color-orange);
+}
+
+.depoimento-card span {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
