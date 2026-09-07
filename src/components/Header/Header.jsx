@@ -1,4 +1,5 @@
 import './Header.css'
+import logoArco from '../../assets/images/logo_arco_vertical.png'
 
 const NAV_LINKS = [
   { label: 'Home', href: '#home' },
@@ -13,7 +14,7 @@ function Header() {
     <header className="header">
       <div className="container header-inner">
         <a href="#home" className="header-logo">
-          <span className="header-logo-badge">AD</span>
+          <img src={logoArco} alt="Logo Arco" className="header-logo-img" />
           <span className="header-logo-text">Arquitetura e Design</span>
         </a>
 
