@@ -1,0 +1,68 @@
+.areas {
+  padding: 4rem 0;
+  background: linear-gradient(180deg, var(--color-yellow) 0%, var(--color-yellow-light) 100%);
+  text-align: center;
+}
+
+.areas-subtitle {
+  color: var(--color-text-dark);
+  opacity: 0.75;
+}
+
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.areas-card {
+  background-color: var(--color-card-bg);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.areas-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  color: var(--color-text-light);
+}
+
+.areas-card--design .areas-icon {
+  background-color: var(--color-purple);
+}
+
+.areas-card--arquitetura .areas-icon {
+  background-color: var(--color-orange);
+}
+
+.areas-card h3 {
+  margin: 0 0 0.5rem;
+}
+
+.areas-card p {
+  color: var(--color-muted);
+  margin: 0 0 1rem;
+}
+
+.areas-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--color-text-dark);
+}
+
+.areas-card li {
+  margin-bottom: 0.35rem;
+}
+
+.areas-link {
+  margin-top: 2rem;
+  color: var(--color-text-dark);
+}
