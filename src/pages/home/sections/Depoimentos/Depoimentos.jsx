@@ -1,3 +1,4 @@
+import {useEffect, useState} from 'react'
 import './Depoimentos.css'
 
 const depoimentos = [
@@ -25,24 +26,132 @@ const depoimentos = [
 ]
 
 function Depoimentos() {
+
+  const [indiceAtual, setIndiceAtual] = useState(0)
+  const [posicaoInicial, setPosicaoInicial] = useState(null)
+  const [autoplaAtivo, setAutoplayAtivo] = useState(false)
+  const limiteArraste= 50
+  
+
+ useEffect(()=>{
+   if(!autoplaAtivo){
+    return 
+   }
+   const intervalo = setInterval(()=>{
+    setIndiceAtual((indice)=>{
+      if(indice === 0){
+        return 1
+      }
+
+      return 0
+    })
+   },3000)
+    return () => clearInterval(intervalo)
+  }, [autoplaAtivo])
+
+
+
+ const posicaoIndicador = Math.min(2, Math.floor((indiceAtual/depoimentos.length)*3))
+ 
+
+  function proximoDepoimento(){
+    if(indiceAtual === depoimentos.length-1){
+      setIndiceAtual(0)
+    }else{
+      setIndiceAtual(indiceAtual + 1)
+    }
+  }
+
+  function depoimentoAnterior(){
+    if(indiceAtual === 0){
+      setIndiceAtual(depoimentos.length-1)
+    }else{
+      setIndiceAtual(indiceAtual -1)
+    }
+  }
+
+  
+
+  function iniciarArraste(evento){
+    setPosicaoInicial(evento.clientX)
+    
+  }
+
+ 
+
+  function finalizarArraste(evento){
+    const posicaoFinal = evento.clientX
+
+    const distanciaArraste = posicaoFinal - posicaoInicial
+
+    if(Math.abs(distanciaArraste)>=limiteArraste){
+      if(distanciaArraste < 0){
+        proximoDepoimento()
+      }else{
+        depoimentoAnterior()
+      }
+    }
+
+   
+    setPosicaoInicial(null)
+  }
+
+
+
   return (
     <section className="depoimentos">
       <div className="container">
         <h2 className="section-title">Feedback de Clientes</h2>
         <p className="section-subtitle">Depoimentos de quem confiou no nosso trabalho</p>
+        
+      
 
-        <div className="depoimentos-grid">
-          {depoimentos.map(({ id, texto, nome, cargo }) => (
-            <blockquote key={id} className="depoimento-card">
-              <p>“{texto}”</p>
+      <div className="depoimentos-carrossel"
+        onMouseEnter={()=> setAutoplayAtivo(true)}
+        onMouseLeave={()=> setAutoplayAtivo(false)}
+      >
+        <div 
+         className="depoimentos-trilho"
+         onPointerDown={iniciarArraste}
+         onPointerUp={finalizarArraste}
+         style={{
+          transform: `translateX(-${indiceAtual * 32}%)`,
+         }}
+        >
+          {depoimentos.map((depoimento)=>(
+            <blockquote 
+              key={depoimento.id}
+              className="depoimento-card"
+            >
+              <p>“{depoimento.texto}”</p>
+
               <footer>
-                <strong>{nome}</strong>
-                <span>{cargo}</span>
+                <strong>{depoimento.nome}</strong>
+                <span>{depoimento.cargo}</span>
               </footer>
             </blockquote>
           ))}
+            
+            
         </div>
       </div>
+
+      <div className="indicadores">
+        <span 
+          className={
+            posicaoIndicador===0 ? 'bolinha ativa' : 'bolinha'
+          }
+        />
+        <span className={
+          posicaoIndicador === 1 ? 'bolinha ativa' : 'bolinha'
+        }
+        />
+        <span className={
+          posicaoIndicador === 2 ? 'bolinha ativa' : 'bolinha'
+        }
+        />
+      </div>
+    </div>
     </section>
   )
 }

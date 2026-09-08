@@ -4,12 +4,19 @@
   text-align: center;
 }
 
-.depoimentos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
+.depoimentos-carrossel{
+  overflow: hidden;
+  width: 100%;
   margin-top: 1.5rem;
-  text-align: left;
+}
+
+.depoimentos-trilho{
+  display: flex;
+  width: 100%;
+  transition: transform 0.3s ease;
+  cursor: grab;
+  user-select: none;
+  gap: 1 rem;
 }
 
 .depoimento-card {
@@ -18,6 +25,7 @@
   padding: 1.75rem;
   margin: 0;
   border-left: 4px solid var(--color-orange);
+  flex: 0 0 calc(33.333% - 1 rem);
 }
 
 .depoimento-card p {
@@ -38,4 +46,23 @@
 .depoimento-card span {
   color: var(--color-muted);
   font-size: 0.85rem;
+}
+
+.indicadores{
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.bolinha{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.bolinha.ativa{
+  background-color: black;
 }
