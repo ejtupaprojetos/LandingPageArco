@@ -22,7 +22,7 @@
 .footer p {
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.9rem;
-  max-width: 32ch;
+  max-width: 30ch;
 }
 
 .footer ul {
@@ -50,19 +50,38 @@
 }
 
 .footer-social a {
-  width: 2.25rem;
-  height: 2.25rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.7rem;
 }
-
+.footer-social a:hover {
+  background-color: var(--color-yellow);
+  color: var(--color-text-dark);
+}
 .footer-copy {
+  max-width: none;
   text-align: center;
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.8rem;
-  margin: 2.5rem 0 0;
+}
+
+.footer-social a img {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+}
+
+.footer-separator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.footer-separator p{
+   max-width: 40ch;
 }

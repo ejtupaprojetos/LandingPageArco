@@ -1,7 +1,8 @@
 
 :root {
   --color-dark: #15151f;
-  --color-yellow: #f2c230;
+  --color-dark-rgb: 21, 21, 31;
+  --color-yellow: #E5B621;
   --color-yellow-light: #fbe7a6;
   --color-purple: #5b3fb8;
   --color-orange: #d9622b;
@@ -81,14 +82,17 @@ img {
 }
 
 .btn-secondary {
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.3);
   border-color: rgba(255, 255, 255, 0.6);
   color: var(--color-text-light);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
 }
 
 .btn-light {
   background-color: var(--color-text-light);
   color: var(--color-purple);
+  font-size: 1.25rem;
 }
 
 .link-arrow {

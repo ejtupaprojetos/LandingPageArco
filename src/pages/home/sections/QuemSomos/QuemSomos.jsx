@@ -1,4 +1,5 @@
 import './QuemSomos.css'
+import equipeFoto from '../../../../assets/images/quem_somos_01.jpg'
 
 function QuemSomos() {
   return (
@@ -17,7 +18,7 @@ function QuemSomos() {
         </div>
 
         <div className="quem-somos-image">
-          {/* troque por <img src={equipeFoto} alt="Equipe ARCO" /> quando tiver a foto */}
+          <img src={equipeFoto} alt="Equipe ARCO" />
         </div>
       </div>
     </section>

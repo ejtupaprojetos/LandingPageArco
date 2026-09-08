@@ -1,6 +1,6 @@
 .areas {
   padding: 4rem 0;
-  background: linear-gradient(180deg, var(--color-yellow) 0%, var(--color-yellow-light) 100%);
+  background: linear-gradient(180deg, var(--color-yellow) 0%, #fff 100%);
   text-align: center;
 }
 
@@ -21,7 +21,7 @@
   background-color: var(--color-card-bg);
   border-radius: var(--radius-lg);
   padding: 2rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .areas-icon {
@@ -30,11 +30,15 @@
   justify-content: center;
   width: 2.75rem;
   height: 2.75rem;
-  border-radius: 50%;
+  border-radius: 30%;
   margin-bottom: 1rem;
   color: var(--color-text-light);
 }
-
+.areas-icon img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
 .areas-card--design .areas-icon {
   background-color: var(--color-purple);
 }

@@ -1,27 +1,38 @@
+import { NavLink, Link } from 'react-router-dom'
 import './Header.css'
+import logoArco from '../../assets/images/logo_arco_vertical.png'
+import useIsScrolled from '../../hooks/useIsScrolled'
 
 const NAV_LINKS = [
-  { label: 'Home', href: '#home' },
-  { label: 'Serviços', href: '#servicos' },
-  { label: 'Portfólio', href: '#portfolio' },
-  { label: 'Sobre nós', href: '#sobre' },
-  { label: 'Contato', href: '#contato' },
+  { label: 'Home', to: '/' },
+  { label: 'Serviços', to: '/servicos' },
+  { label: 'Portfólio', to: '/portfolio' },
+  { label: 'Sobre nós', to: '/sobre' },
+  { label: 'Contato', to: '/contato' },
 ]
 
 function Header() {
+  const isScrolled = useIsScrolled()
+
   return (
-    <header className="header">
+    <header className={`header ${isScrolled ? 'header--scrolled' : ''}`}>
       <div className="container header-inner">
-        <a href="#home" className="header-logo">
-          <span className="header-logo-badge">AD</span>
+        <Link to="/" className="header-logo">
+          <img src={logoArco} alt="Logo ARCO" className="header-logo-img" />
           <span className="header-logo-text">Arquitetura e Design</span>
-        </a>
+        </Link>
 
         <nav className="header-nav">
           <ul>
             {NAV_LINKS.map((link) => (
               <li key={link.label}>
-                <a href={link.href}>{link.label}</a>
+                <NavLink
+                  to={link.to}
+                  end
+                  className={({ isActive }) => (isActive ? 'active' : undefined)}
+                >
+                  {link.label}
+                </NavLink>
               </li>
             ))}
           </ul>

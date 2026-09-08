@@ -1,10 +1,14 @@
 import './ProjetosDestaque.css'
+import agexImg from '../../../../assets/images/agex_con.png'
+import bareImg from '../../../../assets/images/bare_jr.png'
+import miranteImg from '../../../../assets/images/mirante.png'
+import queroImg from '../../../../assets/images/quero_papier.png'
 
 const projetos = [
-  { id: 'agexcom', categoria: 'Arquitetura', titulo: 'Agexcom' },
-  { id: 'mirante', categoria: 'Arquitetura', titulo: 'Projeto Mirante' },
-  { id: 'quero-papier', categoria: 'Design', titulo: 'Quero Papier' },
-  { id: 'bare-junior', categoria: 'Design', titulo: 'Baré Júnior' },
+  { id: 'agexcom', categoria: 'Arquitetura', titulo: 'Agexcom', imagem: agexImg },
+  { id: 'mirante', categoria: 'Arquitetura', titulo: 'Projeto Mirante', imagem: miranteImg },
+  { id: 'quero-papier', categoria: 'Design', titulo: 'Quero Papier', imagem: queroImg },
+  { id: 'bare-junior', categoria: 'Design', titulo: 'Baré Júnior', imagem: bareImg },
 ]
 
 function ProjetosDestaque() {
@@ -14,11 +18,12 @@ function ProjetosDestaque() {
         <h2 className="section-title projetos-title">Projetos de Destaque</h2>
 
         <div className="projetos-grid">
-          {projetos.map(({ id, categoria, titulo }) => (
+          {projetos.map(({ id, categoria, titulo, imagem }) => (
             <article key={id} className="projeto-card">
               <div className="projeto-thumb">
-                {/* troque por uma <img src={...} alt={titulo} /> quando tiver a foto real do projeto */}
                 <span className="projeto-tag">{categoria}</span>
+                <img src={imagem } alt={titulo} />
+                
               </div>
               <h3>{titulo}</h3>
             </article>

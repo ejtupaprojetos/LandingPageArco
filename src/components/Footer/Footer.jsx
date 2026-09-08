@@ -1,6 +1,16 @@
+import { Link } from 'react-router-dom'
 import './Footer.css'
+import iconInstagram from '../../assets/icons/icon_instagram.png'
+import iconLinkedIn from '../../assets/icons/icon_linkedin.png'
+import iconBehance from '../../assets/icons/icon_behance.png'
+import iconFacebook from '../../assets/icons/icon_facebook.png'
 
-const linksRapidos = ['Home', 'Serviços', 'Portfólio', 'Sobre Nós']
+const linksRapidos = [
+  { label: 'Home', to: '/' },
+  { label: 'Serviços', to: '/servicos' },
+  { label: 'Portfólio', to: '/portfolio' },
+  { label: 'Sobre Nós', to: '/sobre' },
+]
 
 const contato = [
   { label: 'contato@arco.com.br', href: 'mailto:contato@arco.com.br' },
@@ -8,11 +18,15 @@ const contato = [
   { label: 'Manaus, AM', href: '#' },
 ]
 
-const redesSociais = ['Instagram', 'LinkedIn', 'Behance', 'Facebook']
-
+const redesSociais = [
+  { label: 'Instagram', icon: iconInstagram, href: 'https://www.instagram.com/arco' },
+  { label: 'LinkedIn', icon: iconLinkedIn, href: 'https://www.linkedin.com/company/arco' },
+  { label: 'Behance', icon: iconBehance, href: 'https://www.behance.net/arco' },
+  { label: 'Facebook', icon: iconFacebook, href: 'https://www.facebook.com/arco' },
+]
 function Footer() {
   return (
-    <footer id="contato" className="footer">
+    <footer className="footer">
       <div className="container footer-grid">
         <div>
           <h3>ARCO</h3>
@@ -26,8 +40,8 @@ function Footer() {
           <h4>Links Rápidos</h4>
           <ul>
             {linksRapidos.map((link) => (
-              <li key={link}>
-                <a href="#home">{link}</a>
+              <li key={link.label}>
+                <Link to={link.to}>{link.label}</Link>
               </li>
             ))}
           </ul>
@@ -47,16 +61,20 @@ function Footer() {
         <div>
           <h4>Redes Sociais</h4>
           <div className="footer-social">
-            {redesSociais.map((rede) => (
-              <a key={rede} href="#" aria-label={rede}>
-                {rede.slice(0, 2).toUpperCase()}
+            {redesSociais.map(({ label, icon, href }) => (
+              <a key={label} href={href} aria-label={label}>
+                <img src={icon} alt={label} />
               </a>
             ))}
           </div>
         </div>
       </div>
-
-      <p className="footer-copy">© 2026 ARCO. Todos os direitos reservados.</p>
+      <div className="footer-separator">
+         <p className="footer-copy">© 2026 ARCO. Todos os direitos reservados.</p>
+      </div>
+    
+          
+      
     </footer>
   )
 }
