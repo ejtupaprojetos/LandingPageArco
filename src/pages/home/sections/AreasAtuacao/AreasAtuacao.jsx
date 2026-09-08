@@ -1,26 +1,12 @@
 import './AreasAtuacao.css'
+import designIcon from '../../../../assets/icons/icon_design.png'
+import arquiteturaIcon from '../../../../assets/icons/icon_arquitetura.png'
 
-function IconDesign() {
-  return (
-    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M9 3 5 7l4 4M15 21l4-4-4-4" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M14 4 10 20" strokeLinecap="round" />
-    </svg>
-  )
-}
-
-function IconArquitetura() {
-  return (
-    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M3 21h18M4 21V9l8-6 8 6v12M9 21v-6h6v6" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  )
-}
 
 const areas = [
   {
     id: 'design',
-    Icon: IconDesign,
+    icon: designIcon,
     title: 'Design',
     description:
       'Projetos de design que unem estética, estratégia e funcionalidade para dar forma a ideias e marcas.',
@@ -28,7 +14,7 @@ const areas = [
   },
   {
     id: 'arquitetura',
-    Icon: IconArquitetura,
+    icon: arquiteturaIcon,
     title: 'Arquitetura',
     description:
       'Arquitetura aplicada de forma estratégica para transformar espaços em experiências funcionais e significativas.',
@@ -46,10 +32,10 @@ function AreasAtuacao() {
         </p>
 
         <div className="areas-grid">
-          {areas.map(({ id, Icon, title, description, items }) => (
+          {areas.map(({ id, icon, title, description, items }) => (
             <article key={id} className={'areas-card areas-card--' + id}>
               <span className="areas-icon">
-                <Icon />
+                <img src={icon} alt={title} />
               </span>
               <h3>{title}</h3>
               <p>{description}</p>
