@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 import './Depoimentos.css'
 
 const depoimentos = [
@@ -29,11 +29,29 @@ function Depoimentos() {
 
   const [indiceAtual, setIndiceAtual] = useState(0)
   const [posicaoInicial, setPosicaoInicial] = useState(null)
+  const [autoplaAtivo, setAutoplayAtivo] = useState(false)
   const limiteArraste= 50
+  
 
-  const posicaoIndicador = Math.min(2, Math.floor((indiceAtual/depoimentos.length)*3)
+ useEffect(()=>{
+   if(!autoplaAtivo){
+    return 
+   }
+   const intervalo = setInterval(()=>{
+    setIndiceAtual((indice)=>{
+      if(indice === 0){
+        return 1
+      }
 
-  )
+      return 0
+    })
+   },3000)
+    return () => clearInterval(intervalo)
+  }, [autoplaAtivo])
+
+
+
+ const posicaoIndicador = Math.min(2, Math.floor((indiceAtual/depoimentos.length)*3))
  
 
   function proximoDepoimento(){
@@ -88,13 +106,16 @@ function Depoimentos() {
         
       
 
-      <div className="depoimentos-carrossel">
+      <div className="depoimentos-carrossel"
+        onMouseEnter={()=> setAutoplayAtivo(true)}
+        onMouseLeave={()=> setAutoplayAtivo(false)}
+      >
         <div 
          className="depoimentos-trilho"
          onPointerDown={iniciarArraste}
          onPointerUp={finalizarArraste}
          style={{
-          transform: `translateX(-${indiceAtual * 100}%)`,
+          transform: `translateX(-${indiceAtual * 32}%)`,
          }}
         >
           {depoimentos.map((depoimento)=>(
