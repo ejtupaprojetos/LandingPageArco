@@ -1,16 +1,13 @@
 .hero {
   position: relative;
-  min-height: 65vh;
+  min-height: 90vh;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   background-color: var(--color-dark);
-  /* Troque pela foto da equipe: coloque o arquivo em src/assets/hero-team.jpg,
-     importe no topo do Hero.jsx (ex: import heroImg from '../../assets/hero-team.jpg')
-     e use backgroundImage: `url(${heroImg})` num style inline, ou deixe a imagem
-     em public/hero-team.jpg e mantenha o caminho abaixo como está. */
-  background-image: url('/hero-team.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+  
 }
 
 .hero-overlay {
@@ -23,6 +20,11 @@
   );
 }
 
+.hero .container {
+  margin-left: 0;
+  padding-left: 4rem;
+
+}
 .hero-content {
   position: relative;
   padding-top: 4rem;
@@ -31,15 +33,15 @@
 }
 
 .hero-content h1 {
-  font-size: clamp(2rem, 5vw, 3.2rem);
-  font-weight: 700;
+  font-size: clamp(2.5rem, 6vw, 4.2rem);
+  font-weight: 900;
   line-height: 1.15;
   margin: 0 0 1rem;
 }
 
 .hero-content p {
-  max-width: 32ch;
-  font-size: 1.05rem;
+  max-width: 50ch;
+  font-size: 1.25rem;
   opacity: 0.9;
   margin: 0 0 1.75rem;
 }

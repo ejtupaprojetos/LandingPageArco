@@ -1,8 +1,9 @@
 import './Hero.css'
+import homeImage from '../../../../assets/images/home_image_02.png'
 
 function Hero() {
   return (
-    <section id="home" className="hero">
+    <section id="home" className="hero" style={{ backgroundImage: `url(${homeImage})` }}>
       <div className="hero-overlay" />
       <div className="container hero-content">
         <h1>
