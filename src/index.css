@@ -90,6 +90,7 @@ img {
 .btn-light {
   background-color: var(--color-text-light);
   color: var(--color-purple);
+  font-size: 1.25rem;
 }
 
 .link-arrow {
