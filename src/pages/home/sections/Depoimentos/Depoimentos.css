@@ -16,6 +16,7 @@
   transition: transform 0.3s ease;
   cursor: grab;
   user-select: none;
+  gap: 1 rem;
 }
 
 .depoimento-card {
@@ -24,7 +25,7 @@
   padding: 1.75rem;
   margin: 0;
   border-left: 4px solid var(--color-orange);
-  flex: 0 0 100%;
+  flex: 0 0 calc(33.333% - 1 rem);
 }
 
 .depoimento-card p {
