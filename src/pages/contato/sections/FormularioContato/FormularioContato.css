@@ -40,3 +40,9 @@
   margin-top: 1.5rem;
   border: none;
 }
+
+.mensagem-erro{
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
