@@ -30,7 +30,13 @@
   border-radius: 14px;
   border: 2px solid currentColor;
   background-color: currentColor;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
+.diferenciais-icon:hover {
+  transform: translateY(-3px) scale(1.02);
+}
+
 .diferenciais-icon img {
   width: 60%;
   height: 60%;
@@ -54,4 +60,8 @@
 .diferenciais-link {
   margin-top: 2.5rem;
   color: var(--color-text-dark);
+}
+
+.diferenciais-link:hover {
+  color: var(--color-orange);
 }

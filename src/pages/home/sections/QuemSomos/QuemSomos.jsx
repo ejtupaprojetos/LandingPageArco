@@ -12,8 +12,10 @@ function QuemSomos() {
             (UFAM), considerada um projeto de extensão dos cursos de
             Arquitetura e Design voltado para estimular o empreendedorismo.
           </p>
-          <a href="#sobre" className="link-arrow">
-            Conheça a Arco ›
+
+          <a href="#sobre" className="link-arrow sobre-link">
+            <span className="link-arrow-text">Conheça a Arco</span>
+            <span className="link-arrow-icon">›</span>
           </a>
         </div>
 

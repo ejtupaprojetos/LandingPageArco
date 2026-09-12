@@ -45,6 +45,14 @@
   border: 2px solid var(--color-orange);
 }
 
+.sobre-link {
+  color: var(--color-text-dark);
+}
+
+.sobre-link:hover {
+  color: var(--color-orange);
+}
+
 @media (max-width: 720px) {
   .quem-somos-grid {
     grid-template-columns: 1fr;

@@ -33,7 +33,8 @@ function Diferenciais() {
         </div>
 
         <a href="#sobre" className="link-arrow diferenciais-link">
-          Saiba mais ›
+          <span className="link-arrow-text">Saiba mais</span>
+          <span className="link-arrow-icon">›</span>
         </a>
       </div>
     </section>
