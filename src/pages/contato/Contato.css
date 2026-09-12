@@ -1,0 +1,17 @@
+.contato-conteudo {
+  padding: 4rem 0;
+  background-color: #fff;
+}
+
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+@media (max-width: 780px) {
+  .contato-grid {
+    grid-template-columns: 1fr;
+  }
+}

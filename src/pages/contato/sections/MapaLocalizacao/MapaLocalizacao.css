@@ -1,0 +1,11 @@
+.mapa {
+  width: 100%;
+  height: 380px;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}

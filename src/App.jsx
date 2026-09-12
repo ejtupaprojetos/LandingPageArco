@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import MainLayout from './layouts/MainLayout'
 import Home from './pages/home/Home'
+import Contato from './pages/contato/Contato'
 
 // Conforme você for terminando as outras páginas, importe cada uma
 // (ex: import Servicos from './pages/servicos/Servicos') e adicione
@@ -13,7 +14,7 @@ function App() {
         {/* <Route path="/servicos" element={<Servicos />} /> */}
         {/* <Route path="/portfolio" element={<Portfolio />} /> */}
         {/* <Route path="/sobre" element={<Sobre />} /> */}
-        {/* <Route path="/contato" element={<Contato />} /> */}
+        <Route path="/contato" element={<Contato />} />
       </Route>
     </Routes>
   )

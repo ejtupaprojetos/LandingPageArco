@@ -1,0 +1,19 @@
+.page-banner {
+  padding: 3.5rem 0;
+  background-color: var(--color-dark);
+  text-align: center;
+}
+
+.page-banner h1 {
+  color: var(--color-yellow);
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  margin: 0 0 0.75rem;
+}
+
+.page-banner p {
+  color: var(--color-text-light);
+  opacity: 0.85;
+  margin: 0 auto;
+  max-width: 46ch;
+}
