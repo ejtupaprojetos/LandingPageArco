@@ -101,4 +101,42 @@ img {
   gap: 0.35rem;
   text-decoration: none;
   font-weight: 600;
+  position: relative;
+}
+
+.link-arrow-text {
+  position: relative;
+}
+
+.link-arrow-text::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-orange);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.link-arrow:hover .link-arrow-text::after {
+  transform: scaleX(1);
+}
+
+.link-arrow-icon {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.link-arrow:hover .link-arrow-icon {
+  transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link-arrow-text::after,
+  .link-arrow-icon {
+    transition: none;
+  }
 }

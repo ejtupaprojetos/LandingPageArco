@@ -2,10 +2,12 @@
   padding: 4rem 0;
   background-color: var(--color-orange);
   color: var(--color-text-light);
+  text-align: center;
 }
 
 .projetos-title {
   color: var(--color-text-light);
+  text-align: start;
 }
 
 .projetos-grid {
@@ -18,13 +20,15 @@
 .projeto-card {
   background-color: #fff;
   border-radius: var(--radius-md);
-  overflow: hidden; /* corta a imagem e o texto seguindo o arredondado do card */
+  overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  /* NOVO: transições para a animação de hover */
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
 }
 
 .projeto-thumb {
   position: relative;
-  aspect-ratio: 3/ 3.3;
+  aspect-ratio: 3 / 3.3;
 }
 
 .projeto-thumb img {
@@ -51,12 +55,36 @@
   padding: 0.9rem 1rem;
   font-size: 1.05rem;
   color: var(--color-text-dark);
+  text-align: start;
 }
 
 .projetos-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-top: 2rem;
   color: var(--color-text-light);
+}
+
+.projetos .link-arrow-text::after {
+  background-color: var(--color-text-light);
+}
+
+/* NOVO: animação de foco/desfoque nos cards — só em dispositivos com hover real */
+@media (hover: hover) and (pointer: fine) {
+  .projetos-grid:hover .projeto-card {
+    filter: blur(2px);
+    opacity: 0.85;
+  }
+
+  .projetos-grid .projeto-card:hover {
+    transform: scale(1.03);
+    filter: blur(0);
+    opacity: 1;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* NOVO: respeita quem prefere menos animação */
+@media (prefers-reduced-motion: reduce) {
+  .projeto-card {
+    transition: none;
+  }
 }

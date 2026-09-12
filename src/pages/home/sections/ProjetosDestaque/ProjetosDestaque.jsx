@@ -31,7 +31,8 @@ function ProjetosDestaque() {
         </div>
 
         <a href="#portfolio" className="link-arrow projetos-link">
-          Ver portfólio completo ›
+          <span className="link-arrow-text">Ver portfólio completo</span>
+          <span className="link-arrow-icon">›</span>
         </a>
       </div>
     </section>
