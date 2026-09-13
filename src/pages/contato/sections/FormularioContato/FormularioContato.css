@@ -1,6 +1,6 @@
 .formulario-contato {
   background-color: #fff;
-  border: 1px solid #e5e5e5;
+  border: 2px solid var(--color-dark);
   border-radius: var(--radius-lg);
   padding: 2rem;
   display: flex;
