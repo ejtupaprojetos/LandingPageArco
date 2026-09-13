@@ -1,0 +1,122 @@
+.servico-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e2e2f0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.servico-card-imagem {
+  position: relative;
+  aspect-ratio: 16 / 10;
+}
+
+.servico-card-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.servico-card-dots {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.servico-card-dots button {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+
+.servico-card-dots button.ativo {
+  background-color: #fff;
+}
+
+.servico-card-conteudo {
+  padding: 1.5rem;
+}
+
+.servico-card-icone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 10px;
+  background-color: var(--color-purple);
+  margin-bottom: 0.85rem;
+}
+
+.servico-card-icone img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.servico-card-conteudo h3 {
+  color: var(--color-purple);
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+}
+
+.servico-card-conteudo p {
+  color: var(--color-muted);
+  margin: 0 0 1rem;
+}
+
+.servico-card-conteudo ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--color-text-dark);
+  font-size: 0.92rem;
+}
+
+.servico-card-conteudo li {
+  margin-bottom: 0.35rem;
+}
+
+/* Cards "em destaque" (Interface, Promocionais no protótipo): ocupam a
+   linha inteira do grid, com imagem e conteúdo lado a lado. */
+.servico-card--horizontal {
+  grid-column: 1 / -1;
+  flex-direction: row;
+}
+
+.servico-card--horizontal .servico-card-imagem {
+  flex: 1 1 45%;
+  aspect-ratio: auto;
+}
+
+.servico-card--horizontal .servico-card-conteudo {
+  flex: 1 1 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* inverte a ordem visual, jogando a imagem pro lado direito */
+.servico-card--imagem-direita {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 720px) {
+  .servico-card--horizontal,
+  .servico-card--imagem-direita {
+    flex-direction: column;
+  }
+
+  .servico-card--horizontal .servico-card-imagem {
+    aspect-ratio: 16 / 10;
+  }
+}
