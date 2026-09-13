@@ -7,6 +7,7 @@
   color: var(--color-muted);
   margin: 0 0 2rem;
   max-width: 46ch;
+  font-size: clamp(0.9rem, 1.8vw, 1.1rem);
 }
 
 .fale-conosco-lista {
@@ -49,7 +50,11 @@
   align-items: center;
   justify-content: center;
 }
-
+.fale-conosco-icone img {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+}
 .fale-conosco-horario {
   background-color: var(--color-dark);
   color: var(--color-text-light);
@@ -85,12 +90,17 @@
 }
 
 .fale-conosco-social-icons a {
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   background-color: var(--color-dark);
   color: var(--color-text-light);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.fale-conosco-social-icons img{
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
 }
