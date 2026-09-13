@@ -1,7 +1,7 @@
 .servico-card {
   display: flex;
   flex-direction: column;
-  border: 1px solid #e2e2f0;
+  border: 2px solid var(--color-purple);
   border-radius: var(--radius-lg);
   overflow: hidden;
   background-color: #fff;
@@ -10,6 +10,8 @@
 .servico-card-imagem {
   position: relative;
   aspect-ratio: 16 / 10;
+  overflow: hidden;
+  min-height: 0;
 }
 
 .servico-card-imagem img {
@@ -86,16 +88,15 @@
   margin-bottom: 0.35rem;
 }
 
-/* Cards "em destaque" (Interface, Promocionais no protótipo): ocupam a
-   linha inteira do grid, com imagem e conteúdo lado a lado. */
+/* Cards "em destaque": ocupam a linha inteira do grid, com imagem e conteúdo lado a lado. */
 .servico-card--horizontal {
   grid-column: 1 / -1;
   flex-direction: row;
 }
 
 .servico-card--horizontal .servico-card-imagem {
-  flex: 1 1 45%;
-  aspect-ratio: auto;
+  flex: 0 0 45%;
+  height: 320px;
 }
 
 .servico-card--horizontal .servico-card-conteudo {

@@ -6,20 +6,20 @@ import './Servicos.css'
 import iconIdentidade from '../../assets/icons/servicos_t1.png'
 import iconArquitetonico from '../../assets/icons/servicos_t2.png'
 import iconInterface from '../../assets/icons/servicos_t1.png'
-import iconConsultoria from '../../assets/icons/servicos_t4.png'
-import iconReforma from '../../assets/icons/servicos_t5.png'
-import iconPromocionais from '../../assets/icons/servicos_t6.png'
+import iconConsultoria from '../../assets/icons/servicos_t3.png'
+import iconReforma from '../../assets/icons/servicos_t4.png'
+import iconPromocionais from '../../assets/icons/servicos_t5.png'
 
-// ─── Imagens de cada serviço — troque pelos arquivos reais em src/assets/images/servicos/ ───
+// ─── Imagens de cada serviço 
 // Cada serviço pode ter mais de uma imagem: é só colocar vários caminhos no
 // array `imagens` do serviço (ex: [imagem1, imagem2, imagem3]) que o
 // carrossel (as bolinhas) aparece sozinho no ServicoCard.
 import identidadeImg1 from '../../assets/images/servicos/identidade_visual_1.jpg'
 import projetoArqImg1 from '../../assets/images/servicos/projeto_arquitetonico_1.jpg'
-import interfaceImg1 from '../../assets/images/servicos/interface_1.jpg'
+import interfaceImg1 from '../../assets/images/servicos/interface_1.png'
 import consultoriaImg1 from '../../assets/images/servicos/consultoria_1.jpg'
-import reformaImg1 from '../../assets/images/servicos/reforma1.jpg'
-import promocionaisImg1 from '../../assets/images/servicos/promocionais-1.jpg'
+import reformaImg1 from '../../assets/images/servicos/reforma_1.jpg'
+import promocionaisImg1 from '../../assets/images/servicos/promocionais_1.jpg'
 
 // `layout: 'horizontal'` = card "destaque", ocupando a linha toda.
 // `imagePosition` só importa quando o layout é 'horizontal' ('left' ou 'right').
