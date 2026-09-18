@@ -1,7 +1,8 @@
 import PageBanner from '../../components/PageBanner/PageBanner'
 import ServicoCard from './sections/ServicoCard/ServicoCard'
+import CallToAction from '../../components/CallToAction/CallToAction'
+import Faq from './sections/Faq/Faq'
 import './Servicos.css'
-
 
 import iconIdentidade from '../../assets/icons/servicos_t1.png'
 import iconArquitetonico from '../../assets/icons/servicos_t2.png'
@@ -118,7 +119,14 @@ function Servicos() {
           ))}
         </div>
       </section>
+      <Faq />
+
+      <CallToAction
+        title="Ficou interessado?"
+        subtitle="Fala com a gente do que você está precisando!"
+      />
     </>
+    
   )
 }
 
