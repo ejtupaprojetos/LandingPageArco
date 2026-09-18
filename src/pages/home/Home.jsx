@@ -4,7 +4,7 @@ import Diferenciais from './sections/Diferenciais/Diferenciais'
 import ProjetosDestaque from './sections/ProjetosDestaque/ProjetosDestaque'
 import QuemSomos from './sections/QuemSomos/QuemSomos'
 import Depoimentos from './sections/Depoimentos/Depoimentos'
-import CallToAction from './sections/CallToAction/CallToAction'
+import CallToAction from '../../components/CallToAction/CallToAction'
 
 function Home() {
   return (
@@ -15,7 +15,10 @@ function Home() {
       <ProjetosDestaque />
       <QuemSomos />
       <Depoimentos />
-      <CallToAction />
+      <CallToAction
+        title="Seu projeto pode aparecer aqui!"
+        subtitle="Fala com a gente do que você está precisando!"
+      />
     </>
   )
 }
