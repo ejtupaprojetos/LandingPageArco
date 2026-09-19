@@ -9,7 +9,7 @@ import iconlocalizacao from '../../../../assets/icons/localizacao_amarelo.png'
 
 
 const contatos = [
-  { id: 'email', icon: iconEmail, label: 'Email', valor: 'contato@arco.com.br' },
+  { id: 'email', icon: iconEmail, label: 'Email', valor: 'arcoempresajunior@gmail.com' },
   { id: 'telefone', icon: iconPhone, label: 'Telefone', valor: '(00) 0000-0000' },
   { id: 'endereco', icon: iconlocalizacao, label: 'Endereço', valor: 'Av. General Rodrigo Octavio Jordão Ramos, 1200 - Coroado I, Manaus - AM' },
 ]
