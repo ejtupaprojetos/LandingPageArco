@@ -10,6 +10,16 @@ const CAMPOS_INICIAIS = {
   mensagem: '',
 }
 
+const OPCOES_SERVICO = [
+  'Identidade Visual',
+  'Projeto arquitetônico',
+  'Interface',
+  'Consultoria',
+  'Reforma',
+  'Promocionais',
+  'Outro',
+]
+
 function FormularioContato() {
   const [campos, setCampos] = useState(CAMPOS_INICIAIS)
   const[erros, setErros] = useState({})
@@ -142,15 +152,22 @@ function FormularioContato() {
       {erros.whatsapp && <span className="mensagem-erro">{erros.whatsapp}</span>}
 
       <label htmlFor="servico">Serviço de Interesse *</label>
-      <input
+      <select
         id="servico"
         name="servico"
-        type="text"
-        placeholder="Ex: Identidade visual, Projeto arquitetônico..."
+        //type="text"
+        //placeholder="Ex: Identidade visual, Projeto arquitetônico..."
         value={campos.servico}
         onChange={handleChange}
         required
-      />
+      >
+        <option value="">Selecione um serviço</option>
+        {OPCOES_SERVICO.map((opcao) => (
+          <option key={opcao} value={opcao}>
+            {opcao}
+          </option>
+        ))}
+      </select>
       {erros.servico && <span className="mensagem-erro">{erros.servico}</span>}
 
       <label htmlFor="mensagem">Mensagem *</label>
