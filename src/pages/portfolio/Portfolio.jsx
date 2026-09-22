@@ -1,23 +1,22 @@
 import { useState } from 'react'
 import PageBanner from '../../components/PageBanner/PageBanner'
-import CallToAction from '../../components/CallToAction/CallToAction'
+//import CallToAction from '../../components/CallToAction/CallToAction'
 import FiltroCategorias from './sections/FiltroCategorias/FiltroCategorias'
 import PortfolioCard from './sections/PortfolioCard/PortfolioCard'
 import './Portfolio.css'
 
-// ─── Imagens de cada projeto — troque pelos arquivos reais ───
-import barbeariaImg from '../../assets/images/portfolio/barbearia-don-luiz.jpg'
-import depyllareImg from '../../assets/images/portfolio/depyllare.jpg'
-import serpanImg from '../../assets/images/portfolio/panificadora-serpan.jpg'
-import bareJuniorImg from '../../assets/images/portfolio/bare-junior.jpg'
-import miranteImg from '../../assets/images/portfolio/projeto-mirante.jpg'
+// Imagens de cada projeto
+import barbeariaImg from '../../assets/images/portfolio/barbearia_don_luiz.png'
+import depyllareImg from '../../assets/images/portfolio/depyllare.png'
+import serpanImg from '../../assets/images/portfolio/panificadora_serpan.png'
+import bareJuniorImg from '../../assets/images/portfolio/bare_junior.png'
+import miranteImg from '../../assets/images/portfolio/projeto_mirante.png'
 import agexcomImg from '../../assets/images/portfolio/agexcom.jpg'
-import queroPapierImg from '../../assets/images/portfolio/quero-papier.jpg'
-import santaPreguicaImg from '../../assets/images/portfolio/santa-preguica.jpg'
+import queroPapierImg from '../../assets/images/portfolio/quero_papier.png'
+import santaPreguicaImg from '../../assets/images/portfolio/santa_preguica.jpg'
 
-// As categorias das abas — "Interface" já existe aqui mesmo sem nenhum
-// projeto usando ela ainda; a aba só vai mostrar uma lista vazia até você
-// adicionar um projeto com essa categoria no array `projetos` abaixo.
+// As categorias das abas Interface já existe mas ainda não possui um projeto nela
+// é so colocar no array de projetos na cat interface  
 const CATEGORIAS = ['Todos', 'Residencial', 'Gráfico', 'Interface', 'Design de Interiores']
 
 const projetos = [
@@ -125,10 +124,10 @@ function Portfolio() {
         </div>
       </section>
 
-      <CallToAction
+      {/* <CallToAction
         title="Seu projeto pode aparecer aqui!"
         subtitle="Fala com a gente do que você está precisando!"
-      />
+      /> */}
     </>
   )
 }
