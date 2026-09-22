@@ -1,0 +1,62 @@
+.portfolio-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-orange);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.portfolio-card-imagem {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  min-height: 0; /* evita o vazamento de altura do flex com imagens grandes */
+}
+
+.portfolio-card-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-card-tag {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background-color: rgba(20, 20, 20, 0.85);
+  color: var(--color-text-light);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+}
+
+.portfolio-card-conteudo {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.portfolio-card-conteudo h3 {
+  color: var(--color-orange);
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+}
+
+.portfolio-card-ano {
+  display: block;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-card-conteudo p {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  margin: 0;
+  /* corta a descrição em 2 linhas e completa com "...", igual ao protótipo */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

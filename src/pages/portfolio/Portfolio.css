@@ -1,0 +1,16 @@
+.portfolio-conteudo {
+  padding: 3rem 0 4rem;
+  background-color: #fff;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+}
+
+@media (max-width: 720px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
