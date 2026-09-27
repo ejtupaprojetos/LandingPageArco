@@ -1,6 +1,6 @@
 export async function enviarMensagemContato(campos){
     const response = await fetch(
-        'https://formsubmit.co/ajax/codebynicoly@gmail.com',
+        'https://formsubmit.co/ajax/arcoempresajunio@gmail.com',
         {
             method: 'POST',
             headers:{
@@ -8,7 +8,10 @@ export async function enviarMensagemContato(campos){
                 'Accept': 'application/json'
             },
 
-            body: JSON.stringify(campos)
+            body: JSON.stringify({
+                ...campos,
+                _template: 'table',
+            }),
 
 
         }
