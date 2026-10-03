@@ -1,20 +1,43 @@
 .page-banner {
   padding: 3.5rem 0;
-  background-color: var(--color-dark);
+  /* background-color: var(--color-dark); */
   text-align: center;
 }
 
 .page-banner h1 {
-  color: var(--color-yellow);
+  /* color: var(--color-yellow); */
   font-size: clamp(1.8rem, 4.3vw, 2.8rem);
   font-weight: 800;
   margin: 0 0 0.75rem;
 }
 
 .page-banner p {
-  color: var(--color-text-light);
+ /* color: var(--color-text-light);*/
    font-size: clamp(0.9rem, 2.1vw, 1.4rem);
   opacity: 0.85;
   margin: 0 auto;
   max-width: 46ch;
+}
+
+/* cores escuras: contato*/
+.page-banner--dark {
+  background-color: var(--color-dark);
+}
+
+.page-banner--dark h1 {
+  color: var(--color-yellow);
+}
+
+.page-banner--dark p {
+  color: var(--color-text-light);
+}
+
+/*para serviços*/
+.page-banner--purple {
+  background-color: var(--color-purple);
+}
+
+.page-banner--purple h1,
+.page-banner--purple p {
+  color: var(--color-text-light);
 }
