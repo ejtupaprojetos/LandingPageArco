@@ -27,7 +27,7 @@ import promocionaisImg1 from '../../assets/images/servicos/promocionais_1.jpg'
 const servicos = [
   {
     id: 'identidade-visual',
-    layout: 'vertical',
+    layout: 'horizontal',
     icon: iconIdentidade,
     titulo: 'Identidade Visual',
     descricao:
@@ -37,11 +37,11 @@ const servicos = [
       'Coerência visual em todos os pontos',
       'Reconhecimento e diferenciação',
     ],
-    imagens: [identidadeImg1],
+    imagens: [identidadeImg1, identidadeImg1, identidadeImg1],
   },
   {
     id: 'projeto-arquitetonico',
-    layout: 'vertical',
+    layout: 'horizontal',
     icon: iconArquitetonico,
     titulo: 'Projeto arquitetônico',
     descricao:
@@ -51,7 +51,7 @@ const servicos = [
       'Funcionalidade, estética e conforto',
       'Projetos pensados para uso real',
     ],
-    imagens: [projetoArqImg1],
+    imagens: [projetoArqImg1, projetoArqImg1, projetoArqImg1],
   },
   {
     id: 'interface',
@@ -61,11 +61,11 @@ const servicos = [
     titulo: 'Interface',
     descricao: 'Criamos um layout único para o seu site ou aplicativo em desenvolvimento!',
     itens: ['Experiência do usuário (UX)', 'Interfaces funcionais e intuitivas', 'Layouts responsivos'],
-    imagens: [interfaceImg1],
+    imagens: [interfaceImg1, interfaceImg1, interfaceImg1],
   },
   {
     id: 'consultoria',
-    layout: 'vertical',
+    layout: 'horizontal',
     icon: iconConsultoria,
     titulo: 'Consultoria',
     descricao:
@@ -75,11 +75,11 @@ const servicos = [
       'Melhor aproveitamento do ambiente',
       'Redução de erros antes da execução',
     ],
-    imagens: [consultoriaImg1],
+    imagens: [consultoriaImg1, consultoriaImg1, consultoriaImg1],
   },
   {
     id: 'reforma',
-    layout: 'vertical',
+    layout: 'horizontal',
     icon: iconReforma,
     titulo: 'Reforma',
     descricao: 'Alteramos ambientes existentes para transformar em um lugar ideal para você!',
@@ -88,7 +88,7 @@ const servicos = [
       'Melhorias estéticas e funcionais',
       'Transformação sem desperdícios',
     ],
-    imagens: [reformaImg1],
+    imagens: [reformaImg1, reformaImg1, reformaImg1],
   },
   {
     id: 'promocionais',
@@ -99,7 +99,7 @@ const servicos = [
     descricao:
       'Produzimos material gráfico como panfletos, apresentações e postagens para promover o seu produto ou marca da melhor forma!',
     itens: ['Materiais impressos e digitais', 'Comunicação visual estratégica', 'Conteúdos alinhados à marca'],
-    imagens: [promocionaisImg1],
+    imagens: [promocionaisImg1, promocionaisImg1, promocionaisImg1],
   },
 ]
 

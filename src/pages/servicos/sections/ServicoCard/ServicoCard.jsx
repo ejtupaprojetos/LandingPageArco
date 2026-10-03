@@ -7,6 +7,30 @@ function ServicoCard({ servico }) {
   const { titulo, descricao, itens, icon, imagens, layout, imagePosition } = servico
   const [indiceAtual, setIndiceAtual] = useState(0)
 
+  const [posicaoInicial, setPosicaoInicial]= useState(null)
+  const limiteArraste = 50
+
+  function iniciarArraste(evento){
+    setPosicaoInicial(evento.touches[0].clientX)
+  }
+
+  function finalizarArraste(evento){
+    if(posicaoInicial=== null) return
+
+    const posicaoFinal = evento.changedTouches[0].clientX
+    const distancia = posicaoInicial - posicaoFinal
+
+    if(Math.abs(distancia)>= limiteArraste){
+      if(distancia > 0){
+        setIndiceAtual((indice)=> (indice + 1) % imagens.length)
+      }else{
+        setIndiceAtual((indice)=>(indice - 1 + imagens.length) % imagens.length
+      )
+      }
+    }
+    setPosicaoInicial(null)
+  }
+
   const classeCard = [
     'servico-card',
     layout === 'horizontal' ? 'servico-card--horizontal' : '',
@@ -17,7 +41,10 @@ function ServicoCard({ servico }) {
 
   return (
     <article className={classeCard}>
-      <div className="servico-card-imagem">
+      <div className="servico-card-imagem"
+      onTouchStart={iniciarArraste}
+      onTouchEnd={finalizarArraste}
+      >
         <img src={imagens[indiceAtual]} alt={titulo} />
 
         {/* o carrossel (as bolinhas) só aparece se o serviço tiver mais de uma imagem */}
