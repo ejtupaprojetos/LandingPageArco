@@ -1,0 +1,16 @@
+.cta {
+  padding: 3.5rem 0;
+  background-color: var(--color-purple);
+  color: var(--color-text-light);
+  text-align: center;
+}
+
+.cta h2 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.3rem, 2.5vw, 1.75rem);
+}
+
+.cta p {
+  margin: 0 0 1.5rem;
+  opacity: 0.9;
+}
