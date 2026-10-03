@@ -12,6 +12,7 @@
   aspect-ratio: 16 / 10;
   overflow: hidden;
   min-height: 0;
+  touch-action: pan-y
 }
 
 .servico-card-imagem img {
