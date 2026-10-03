@@ -23,7 +23,31 @@ const depoimentos = [
     nome: 'Ana Costa',
     cargo: 'Diretora de Marketing',
   },
+  {
+    id: 4,
+    texto:
+      'A ARCO transformou completamente minha loja. O projeto arquitetônico superou todas as expectativas!',
+    nome: 'Maria Silva',
+    cargo: 'Empresária',
+  },
+  {
+    id: 5,
+    texto:
+      'O design gráfico criado pela equipe deu uma identidade profissional à nossa startup. Recomendo!',
+    nome: 'João Santos',
+    cargo: 'Fundador · TechStart',
+  },
+   {
+    id: 6,
+    texto:
+      'Trabalho impecável no desenvolvimento do nosso site. Equipe comprometida e criativa.',
+    nome: 'Ana Costa',
+    cargo: 'Diretora de Marketing',
+  },
 ]
+
+
+
 
 function Depoimentos() {
 
@@ -31,31 +55,30 @@ function Depoimentos() {
   const [posicaoInicial, setPosicaoInicial] = useState(null)
   const [autoplaAtivo, setAutoplayAtivo] = useState(false)
   const limiteArraste= 50
+
+  const quantidadeCardsVisiveis = window.innerWidth <= 768 ? 1 : 3
+  const quantidadeGrupos = Math.ceil(depoimentos.length / quantidadeCardsVisiveis)
   
 
  useEffect(()=>{
    if(!autoplaAtivo){
     return 
    }
-   const intervalo = setInterval(()=>{
-    setIndiceAtual((indice)=>{
-      if(indice === 0){
-        return 1
+   const intervalo = setTimeout(()=>{
+    if(indiceAtual===0){
+      setIndiceAtual(1)
       }
-
-      return 0
-    })
    },3000)
     return () => clearInterval(intervalo)
-  }, [autoplaAtivo])
+  }, [autoplaAtivo, indiceAtual])
 
 
 
- const posicaoIndicador = Math.min(2, Math.floor((indiceAtual/depoimentos.length)*3))
+ const posicaoIndicador = indiceAtual 
  
 
   function proximoDepoimento(){
-    if(indiceAtual === depoimentos.length-1){
+    if(indiceAtual === quantidadeGrupos - 1){
       setIndiceAtual(0)
     }else{
       setIndiceAtual(indiceAtual + 1)
@@ -64,9 +87,9 @@ function Depoimentos() {
 
   function depoimentoAnterior(){
     if(indiceAtual === 0){
-      setIndiceAtual(depoimentos.length-1)
+      setIndiceAtual(quantidadeGrupos - 1)
     }else{
-      setIndiceAtual(indiceAtual -1)
+      setIndiceAtual(indiceAtual - 1)
     }
   }
 
@@ -115,7 +138,7 @@ function Depoimentos() {
          onPointerDown={iniciarArraste}
          onPointerUp={finalizarArraste}
          style={{
-          transform: `translateX(-${indiceAtual * 32}%)`,
+          transform: `translateX(-${indiceAtual * 100}%)`,
          }}
         >
           {depoimentos.map((depoimento)=>(
@@ -137,19 +160,19 @@ function Depoimentos() {
       </div>
 
       <div className="indicadores">
-        <span 
-          className={
-            posicaoIndicador===0 ? 'bolinha ativa' : 'bolinha'
-          }
-        />
-        <span className={
-          posicaoIndicador === 1 ? 'bolinha ativa' : 'bolinha'
+      {Array.from({
+        length: quantidadeGrupos,
+      }).map((_, indice)=>(
+        <button
+        key={indice}
+        type="button"
+        className={
+          posicaoIndicador === indice ? 'bolinha ativa' : 'bolinha'
         }
+        onClick={() => setIndiceAtual(indice)}
+        aria-label={`Ir para o grupo ${indice + 1}`}
         />
-        <span className={
-          posicaoIndicador === 2 ? 'bolinha ativa' : 'bolinha'
-        }
-        />
+      ))}
       </div>
     </div>
     </section>
