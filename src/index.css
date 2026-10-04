@@ -88,12 +88,23 @@ img {
   backdrop-filter: blur(1px);
   -webkit-backdrop-filter: blur(1px);
 }
-
+/*variantes de cor do bot de orçamento*/
 .btn-light {
   background-color: var(--color-text-light);
   color: var(--color-purple);
   font-size: 1.25rem;
 }
+.btn-light--purple {
+    background-color: var(--color-text-light);
+    color: var(--color-purple);
+    font-size: 1.25rem;
+}
+.btn-light--orange {
+    background-color: var(--color-text-light);
+    color: var(--color-orange);
+    font-size: 1.25rem;
+}
+
 
 .link-arrow {
   display: inline-flex;

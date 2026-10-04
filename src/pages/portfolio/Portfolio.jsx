@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import PageBanner from '../../components/PageBanner/PageBanner'
-//import CallToAction from '../../components/CallToAction/CallToAction'
+import CallToAction from '../../components/CallToAction/CallToAction'
 import FiltroCategorias from './sections/FiltroCategorias/FiltroCategorias'
 import PortfolioCard from './sections/PortfolioCard/PortfolioCard'
 import './Portfolio.css'
@@ -124,10 +124,11 @@ function Portfolio() {
         </div>
       </section>
 
-      {/* <CallToAction
+      <CallToAction
+        variant="orange"
         title="Seu projeto pode aparecer aqui!"
         subtitle="Fala com a gente do que você está precisando!"
-      /> */}
+      />
     </>
   )
 }
