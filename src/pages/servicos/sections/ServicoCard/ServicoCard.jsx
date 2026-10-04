@@ -6,24 +6,27 @@ import './ServicoCard.css'
 function ServicoCard({ servico }) {
   const { titulo, descricao, itens, icon, imagens, layout, imagePosition } = servico
   const [indiceAtual, setIndiceAtual] = useState(0)
+  const [direcao, setDirecao]= useState('direita')
 
   const [posicaoInicial, setPosicaoInicial]= useState(null)
   const limiteArraste = 50
 
   function iniciarArraste(evento){
-    setPosicaoInicial(evento.touches[0].clientX)
+    setPosicaoInicial(evento.clientX)
   }
 
   function finalizarArraste(evento){
-    if(posicaoInicial=== null) return
+    if(posicaoInicial === null) return
 
-    const posicaoFinal = evento.changedTouches[0].clientX
+    const posicaoFinal = evento.clientX
     const distancia = posicaoInicial - posicaoFinal
 
     if(Math.abs(distancia)>= limiteArraste){
       if(distancia > 0){
+        setDirecao('esquerda')
         setIndiceAtual((indice)=> (indice + 1) % imagens.length)
       }else{
+        setDirecao('direita')
         setIndiceAtual((indice)=>(indice - 1 + imagens.length) % imagens.length
       )
       }
@@ -42,10 +45,15 @@ function ServicoCard({ servico }) {
   return (
     <article className={classeCard}>
       <div className="servico-card-imagem"
-      onTouchStart={iniciarArraste}
-      onTouchEnd={finalizarArraste}
+      onPointerDown={iniciarArraste}
+      onPointerUp={finalizarArraste}
       >
-        <img src={imagens[indiceAtual]} alt={titulo} />
+
+
+        <div className={`servico-card-imagem-slide ${direcao}`}>
+          <img src={imagens[indiceAtual]} alt={titulo} />
+        </div>
+        
 
         {/* o carrossel (as bolinhas) só aparece se o serviço tiver mais de uma imagem */}
         {imagens.length > 1 && (
