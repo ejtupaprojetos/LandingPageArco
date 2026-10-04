@@ -41,3 +41,12 @@
 .page-banner--purple p {
   color: var(--color-text-light);
 }
+
+/*para portfolio*/
+.page-banner--orange {
+  background-color: var(--color-orange);
+}
+.page-banner--orange h1,
+.page-banner--orange p {
+  color: var(--color-text-light);
+}
