@@ -1,0 +1,49 @@
+.valores {
+  padding: 3rem 0;
+  background-color: var(--color-yellow);
+}
+
+.valores h2 {
+  text-align: center;
+  margin: 0 0 1.75rem;
+  font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+}
+
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.valores-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1.25rem 0.75rem;
+  background-color: #fff;
+  border: 1px solid var(--color-text-dark);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.valores-icone {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.valores-icone img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.valores-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+}

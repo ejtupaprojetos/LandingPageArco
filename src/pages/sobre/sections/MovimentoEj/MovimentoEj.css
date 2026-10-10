@@ -1,0 +1,75 @@
+.movimento {
+  padding: 3.5rem 0;
+  background-color: var(--color-dark);
+  color: var(--color-text-light);
+}
+
+.movimento-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.movimento-texto h2 {
+  margin: 0 0 1rem;
+  color: var(--color-yellow);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.movimento-texto p {
+  margin: 0 0 1.25rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.movimento-numeros {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.movimento-numeros strong {
+  display: block;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.1;
+}
+
+.movimento-numeros span {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.movimento-imagem {
+  aspect-ratio: 16 / 10;
+  border: 2px solid var(--color-yellow);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  min-height: 0;
+}
+
+.movimento-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.movimento-logos {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.movimento-logos img {
+  height: 3rem;
+  width: auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 780px) {
+  .movimento-grid {
+    grid-template-columns: 1fr;
+  }
+}
