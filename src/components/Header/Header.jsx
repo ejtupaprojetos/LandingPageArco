@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import './Header.css'
 import logoArco from '../../assets/images/logo_arco_vertical.png'
@@ -13,6 +14,7 @@ const NAV_LINKS = [
 
 function Header() {
   const isScrolled = useIsScrolled()
+  const [menuAberto , setMenuAberto] = useState(false)
 
   return (
     <header className={`header ${isScrolled ? 'header--scrolled' : ''}`}>
@@ -22,7 +24,19 @@ function Header() {
           <span className="header-logo-text">Arquitetura e Design</span>
         </Link>
 
-        <nav className="header-nav">
+        <button
+          className="header-menu-botao"
+          type="button"
+          aria-label={menuAberto ? 'Fechar menu': 'Abrir menu'}
+          aria-expanded={menuAberto}
+          onClick={()=> setMenuAberto(!menuAberto)}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+        <nav className={`header-nav ${menuAberto ? 'header-nav--aberto' : ''}`}>
           <ul>
             {NAV_LINKS.map((link) => (
               <li key={link.label}>
@@ -30,6 +44,7 @@ function Header() {
                   to={link.to}
                   end
                   className={({ isActive }) => (isActive ? 'active' : undefined)}
+                  onClick={() => setMenuAberto(false)}
                 >
                   {link.label}
                 </NavLink>
