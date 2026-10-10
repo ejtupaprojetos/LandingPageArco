@@ -38,7 +38,7 @@
 }
 
 .diretoria-destaque-foto {
-  width: 11rem;
+  width: 15rem;
   aspect-ratio: 1 / 1;
   border: 2px solid var(--color-yellow);
   border-radius: var(--radius-md);

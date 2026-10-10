@@ -14,9 +14,16 @@
   margin: 0 0 1.5rem;
   opacity: 0.9;
 }
+/*variante roxa*/
 .cta--purple {
   background-color: var(--color-purple);
 }
+/*variante laranja*/
 .cta--orange {
   background-color: var(--color-orange);
+}
+/*variante amarela*/
+.cta--yellow {
+  background-color: var(--color-yellow);
+  /* color: var(--color-text-dark); */
 }
