@@ -9,9 +9,10 @@ import iconlocalizacao from '../../../../assets/icons/localizacao_amarelo.png'
 
 
 const contatos = [
-  { id: 'email', icon: iconEmail, label: 'Email', valor: 'arcoempresajunior@gmail.com' },
-  { id: 'telefone', icon: iconPhone, label: 'Telefone', valor: '(00) 0000-0000' },
-  { id: 'endereco', icon: iconlocalizacao, label: 'Endereço', valor: 'Av. General Rodrigo Octavio Jordão Ramos, 1200 - Coroado I, Manaus - AM' },
+  { id: 'email', icon: iconEmail, label: 'Email', valor: 'arcoempresajunior@gmail.com' , href: 'https://mail.google.com/?view=cm&fs=1&to=arcoempresajunior@gmail.com' },
+  { id: 'telefone-maria', icon: iconPhone, label: 'Telefone', valor: '(92) 8262-1787' , href: 'https://wa.me/559282621787' },
+  { id: 'telefone-gabriela', icon: iconPhone, label: 'Telefone', valor: '(92) 8255-6105', href: 'https://wa.me/559282556105' },
+  { id: 'endereco', icon: iconlocalizacao, label: 'Endereço', valor: 'Av. Ephigênio Salles, 1327, Sala E, Box 77, Manaus - AM' },
 ]
 
 const horarios = [
@@ -21,10 +22,11 @@ const horarios = [
 ]
 
 const redesSociais = [
-  { id: 'instagram', label: 'Instagram', icon: iconInstagram, href: '#' },
-  { id: 'linkedin', label: 'LinkedIn', icon: iconLinkedIn, href: '#' },
-  { id: 'behance', label: 'Behance', icon: iconBehance, href: '#' },
-  { id: 'facebook', label: 'Facebook', icon: iconFacebook, href: '#' },
+  { id: 'instagram', label: 'Instagram', icon: iconInstagram, href: 'https://www.instagram.com/arcoej' },
+  { id: 'linkedin', label: 'LinkedIn', icon: iconLinkedIn, href: 'https://www.linkedin.com/company/arco' },
+  { id: 'behance', label: 'Behance', icon: iconBehance, href: 'https://www.behance.net/arco' },
+  { id: 'facebook', label: 'Facebook', icon: iconFacebook, href: 'https://www.facebook.com/arco' },
+
 ]
 
 function FaleConosco() {
@@ -37,14 +39,18 @@ function FaleConosco() {
       </p>
 
       <ul className="fale-conosco-lista">
-        {contatos.map(({ id, icon, label, valor }) => (
+        {contatos.map(({ id, icon, label, valor, href }) => (
           <li key={id}>
             <span className="fale-conosco-icone">
               <img src={icon} alt={label} />
             </span>
             <div>
               <strong>{label}</strong>
-              <span>{valor}</span>
+              {href ? (
+                <a href={href}>{valor}</a>
+              ) : (
+                <span>{valor}</span>
+              )}
             </div>
           </li>
         ))}

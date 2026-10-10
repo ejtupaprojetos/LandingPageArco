@@ -16,10 +16,10 @@ function Hero() {
           projeto sair do papel
         </p>
         <div className="hero-actions">
-          <a href="#contato" className="btn btn-primary">
+          <a href="/contato" className="btn btn-primary">
             Fale conosco
           </a>
-          <a href="#portfolio" className="btn btn-secondary">
+          <a href="/portfolio" className="btn btn-secondary">
             Portfólio
           </a>
         </div>

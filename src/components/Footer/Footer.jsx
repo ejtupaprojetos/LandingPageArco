@@ -13,13 +13,14 @@ const linksRapidos = [
 ]
 
 const contato = [
-  { label: 'contato@arco.com.br', href: 'mailto:contato@arco.com.br' },
-  { label: '(00) 0000-0000', href: 'tel:+550000000000' },
-  { label: 'Manaus, AM', href: '#' },
+  { label: 'arcoempresajunior@gmail.com', href: 'https://mail.google.com/?view=cm&fs=1&to=arcoempresajunior@gmail.com '},
+  { label: '(92) 8262-1787', href: 'https://wa.me/559282621787' },
+  { label: '(92) 8255-6105', href: 'https://wa.me/559282556105' },
+  { label: 'Manaus, AM', href: '/contato#localizacao' },
 ]
 
 const redesSociais = [
-  { label: 'Instagram', icon: iconInstagram, href: 'https://www.instagram.com/arco' },
+  { label: 'Instagram', icon: iconInstagram, href: 'https://www.instagram.com/arcoej' },
   { label: 'LinkedIn', icon: iconLinkedIn, href: 'https://www.linkedin.com/company/arco' },
   { label: 'Behance', icon: iconBehance, href: 'https://www.behance.net/arco' },
   { label: 'Facebook', icon: iconFacebook, href: 'https://www.facebook.com/arco' },

@@ -84,7 +84,7 @@ function AreasAtuacao() {
           ))}
         </div>
 
-        <a href="#portfolio" className="link-arrow areas-link">
+        <a href="/servicos" className="link-arrow areas-link">
           <span className="link-arrow-text">Ver detalhes</span>
           <span className="link-arrow-icon">›</span>
         </a>
