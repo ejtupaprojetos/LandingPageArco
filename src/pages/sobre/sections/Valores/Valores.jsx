@@ -1,11 +1,10 @@
 import './Valores.css'
-// Mesmos ícones usados em "Nossos diferenciais" na Home. Se tiver versões
-// amarelas desses ícones, é só trocar os caminhos aqui.
-import iconUnidade from '../../../../assets/icons/icon_unidade.png'
-import iconExcelencia from '../../../../assets/icons/icon_excelencia.png'
-import iconProatividade from '../../../../assets/icons/icon_proatividade.png'
-import iconResponsabilidade from '../../../../assets/icons/icon_responsabilidade.png'
-import iconCriatividade from '../../../../assets/icons/icon_criatividade.png'
+
+import iconUnidade from '../../../../assets/icons/valores/icon_unidade.png'
+import iconExcelencia from '../../../../assets/icons/valores/icon_excelencia.png'
+import iconProatividade from '../../../../assets/icons/valores/icon_proatividade.png'
+import iconResponsabilidade from '../../../../assets/icons/valores/icon_responsabilidade.png'
+import iconCriatividade from '../../../../assets/icons/valores/icon_criatividade.png'
 
 const valores = [
   { id: 'unidade', label: 'Unidade', icon: iconUnidade },
