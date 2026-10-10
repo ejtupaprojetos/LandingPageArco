@@ -104,3 +104,9 @@
   height: 1.5rem;
   object-fit: contain;
 }
+
+.fale-conosco-lista a{
+  color: #888;
+  text-decoration: none;
+  font: inherit
+}
