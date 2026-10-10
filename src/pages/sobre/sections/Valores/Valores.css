@@ -6,7 +6,7 @@
 .valores h2 {
   text-align: center;
   margin: 0 0 1.75rem;
-  font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+  font-size: clamp(1.6rem, 2.5vw, 1.6rem);
 }
 
 .valores-grid {
@@ -29,8 +29,8 @@
 }
 
 .valores-icone {
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -35,13 +35,13 @@
 
 .missao-visao-card h3 {
   margin: 0 0 0.6rem;
-  font-size: 1.05rem;
+  font-size: 1.25rem;
 }
 
 .missao-visao-card p {
   margin: 0;
   line-height: 1.55;
-  font-size: 0.95rem;
+  font-size: 1.15rem;
 }
 
 @media (max-width: 720px) {

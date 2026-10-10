@@ -6,7 +6,7 @@
 .trajetoria h2 {
   text-align: center;
   margin: 0 0 2rem;
-  font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
 }
 
 .trajetoria-lista {
@@ -71,13 +71,13 @@
 
 .trajetoria-item h3 {
   margin: 0 0 0.35rem;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
 }
 
 .trajetoria-item p {
   margin: 0;
   color: rgba(255, 255, 255, 0.95);
-  font-size: 0.8rem;
+  font-size: 0.90rem;
   line-height: 1.4;
 }
 
