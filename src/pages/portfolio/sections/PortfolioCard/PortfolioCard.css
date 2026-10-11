@@ -5,6 +5,7 @@
   border-radius: var(--radius-md);
   overflow: hidden;
   background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .portfolio-card-imagem {
@@ -19,6 +20,10 @@
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.portfolio-card-imagem:hover img{
+  transform: scale(1.05s);
 }
 
 .portfolio-card-tag {
@@ -59,4 +64,11 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  line-clamp: 2;
+}
+
+
+.portfolio-card:hover{
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
