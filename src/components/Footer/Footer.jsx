@@ -21,9 +21,9 @@ const contato = [
 
 const redesSociais = [
   { label: 'Instagram', icon: iconInstagram, href: 'https://www.instagram.com/arcoej' },
-  { label: 'LinkedIn', icon: iconLinkedIn, href: 'https://www.linkedin.com/company/arco' },
-  { label: 'Behance', icon: iconBehance, href: 'https://www.behance.net/arco' },
-  { label: 'Facebook', icon: iconFacebook, href: 'https://www.facebook.com/arco' },
+  { label: 'LinkedIn', icon: iconLinkedIn, href: 'https://www.linkedin.com/company/arcoej/home/' },
+  { label: 'Behance', icon: iconBehance, href: 'https://www.behance.net/arcoej' },
+  { label: 'Facebook', icon: iconFacebook, href: 'https://www.facebook.com/profile.php?id=100062942905993' },
 ]
 function Footer() {
   return (

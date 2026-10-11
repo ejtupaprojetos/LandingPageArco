@@ -116,3 +116,28 @@
 .areas-link:hover {
   color: var(--color-orange);
 }
+
+@media (max-width: 480px){
+  .areas-card{
+    padding: 1.25rem;
+    min-width: 0;
+  }
+
+  .areas-items{
+    grid-template-columns: repeat(2, minmax(0 , 1fr));
+    gap: 0.5rem;
+  }
+
+  .areas-item{
+    min-width: 0;
+    padding: 0.5rem;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    overflow-wrap: anywhere;
+  }
+
+  .areas-item-icon{
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+}
