@@ -104,6 +104,11 @@ img {
     color: var(--color-orange);
     font-size: 1.25rem;
 }
+.btn-light--yellow {
+    background-color: var(--color-text-light);
+    color: var(--color-yellow);
+    font-size: 1.25rem;
+}
 
 
 .link-arrow {

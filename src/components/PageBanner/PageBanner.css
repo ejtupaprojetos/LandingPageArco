@@ -50,3 +50,13 @@
 .page-banner--orange p {
   color: var(--color-text-light);
 }
+/* para sobre*/
+
+.page-banner--yellow {
+  background-color: var(--color-yellow);
+}
+.page-banner--yellow h1,
+.page-banner--yellow p {
+  color: var(--color-text-dark);
+}
+
