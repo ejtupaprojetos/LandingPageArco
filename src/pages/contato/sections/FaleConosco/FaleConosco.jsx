@@ -23,9 +23,9 @@ const horarios = [
 
 const redesSociais = [
   { id: 'instagram', label: 'Instagram', icon: iconInstagram, href: 'https://www.instagram.com/arcoej' },
-  { id: 'linkedin', label: 'LinkedIn', icon: iconLinkedIn, href: 'https://www.linkedin.com/company/arco' },
-  { id: 'behance', label: 'Behance', icon: iconBehance, href: 'https://www.behance.net/arco' },
-  { id: 'facebook', label: 'Facebook', icon: iconFacebook, href: 'https://www.facebook.com/arco' },
+  { id: 'linkedin', label: 'LinkedIn', icon: iconLinkedIn, href: 'https://www.linkedin.com/company/arcoej/home/' },
+  { id: 'behance', label: 'Behance', icon: iconBehance, href: 'https://www.behance.net/arcoej' },
+  { id: 'facebook', label: 'Facebook', icon: iconFacebook, href: 'https://www.facebook.com/profile.php?id=100062942905993' },
 
 ]
 
