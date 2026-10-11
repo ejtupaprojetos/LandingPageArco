@@ -14,10 +14,10 @@
   min-height: 0;
   touch-action: pan-y;
   user-select: none;
-  cursor: grab;
+  cursor: default;
 }
 
-.servvico-card-imagem-slide{
+.servico-card-imagem-slide{
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -26,6 +26,13 @@
 .servico-card-imagem-slide img{
   transition: transform 0.4s ease;
 }
+
+
+  .servico-card-imagem:hover img{
+    scale: 1.1;
+    transition: scale 0.4s ease;
+  }
+
 
 .servico-card-imagem-slide.esquerda img{
   animation: deslizarEsquerda 0.4s ease;
@@ -142,14 +149,28 @@
 }
 
 .servico-card-conteudo ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
   margin: 0;
-  padding-left: 1.2rem;
+  padding: 0;
+  list-style: none;
   color: var(--color-text-dark);
   font-size: 0.92rem;
 }
 
+
 .servico-card-conteudo li {
-  margin-bottom: 0.35rem;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  min-height: 3.25rem;
+  padding: 0.75rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 0.6rem;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
 }
 
 /* Cards "em destaque": ocupam a linha inteira do grid, com imagem e conteúdo lado a lado. */
