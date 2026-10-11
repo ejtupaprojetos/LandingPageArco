@@ -32,7 +32,8 @@ function Trajetoria() {
           style={{ gridTemplateColumns: `repeat(${marcos.length}, 1fr)` }}
         >
           {marcos.map(({ ano, titulo, descricao }, indice) => (
-            <li key={indice} className="trajetoria-item">
+            <li key={indice} className="trajetoria-item"
+            style={{'--indice': indice}}>
               <span className="trajetoria-ano">{ano}</span>
               <div className="trajetoria-marcador">
                 <span className="trajetoria-ponto" />

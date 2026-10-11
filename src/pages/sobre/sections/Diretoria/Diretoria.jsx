@@ -1,3 +1,5 @@
+
+import { useEffect , useRef, useState, } from 'react'
 import './Diretoria.css'
 
 // import das fotos
@@ -23,6 +25,26 @@ const membros = [
 ]
 
 function Diretoria() {
+
+const divisorRef = useRef(null)
+const [divisorVisivel , setDivisorVisivel] = useState(false)
+
+useEffect(() => {
+  const observador = new IntersectionObserver(
+    ([entrada]) =>{
+      setDivisorVisivel(entrada.isIntersecting)
+    },
+    {threshold: 0.5}
+  )
+   const divisor = divisorRef.current
+
+   if(divisor){
+    observador.observe(divisor)
+   }
+
+   return () => observador.disconnect()
+}, [])
+
   return (
     <section className="diretoria">
       <div className="container">
@@ -39,7 +61,8 @@ function Diretoria() {
           <span>{diretora.cargo}</span>
         </div>
 
-        <div className="diretoria-divisor" />
+        <div ref={divisorRef}
+        className={`diretoria-divisor ${divisorVisivel ? 'visivel' : ''}`}/>
 
         <div className="diretoria-grid">
           {membros.map(({ id, nome, cargo, foto }) => (
