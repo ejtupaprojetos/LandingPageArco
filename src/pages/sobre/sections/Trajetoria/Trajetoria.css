@@ -1,100 +1,191 @@
-.trajetoria {
-  padding: 3rem 0 3.5rem;
-  background-color: var(--color-yellow);
+.trajetoria { padding: 3rem 0 3.5rem; 
+  background-color: var(--color-yellow); 
 }
 
-.trajetoria h2 {
-  text-align: center;
-  margin: 0 0 2rem;
-  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+.trajetoria h2 { text-align: center; 
+  margin: 0 0 2.5rem; 
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem); 
 }
 
-.trajetoria-lista {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 0.5rem;
+.trajetoria-lista { list-style: none; 
+  margin: 0; 
+  padding: 0; 
+  display: grid; 
+  gap: 0.5rem; 
 }
 
-.trajetoria-item {
-  text-align: center;
+.trajetoria-item { 
+  min-width: 0; 
+  text-align: center; 
+  animation: trajetoria-entrada 0.6s ease both; 
+  animation-delay: calc(var(--indice) * 100ms); 
 }
 
-.trajetoria-ano {
-  display: inline-block;
-  min-width: 3.5rem;
-  padding: 0.1rem 0.6rem;
-  background-color: #fff;
-  border: 1px solid var(--color-text-dark);
-  border-radius: 4px;
-  font-size: 0.8rem;
+.trajetoria-ano { display: inline-block; 
+  min-width: 3.5rem; 
+  padding: 0.1rem 0.6rem; 
+  background-color: #fff; 
+  border: 1px solid var(--color-text-dark); 
+  border-radius: 4px; 
+  font-size: 0.8rem; 
+  transition: 
+  transform 0.25s ease,
+  background-color 0.25s ease,
+  box-shadow 0.25s ease;
 }
 
-/* o marcador desenha a linha horizontal que passa por trás do ponto */
-.trajetoria-marcador {
-  position: relative;
-  height: 1.25rem;
-  margin: 0.4rem 0;
+.trajetoria-item:hover .trajetoria-ano {
+  transform: translateY(-3px);
+  background-color: var(--color-orange);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12)
 }
 
-.trajetoria-marcador::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: -0.25rem;
+.trajetoria-marcador { position: relative;
+   height: 1.25rem; 
+   margin: 0.4rem 0; 
+  }
+
+.trajetoria-marcador::before { content: ''; 
+  position: absolute; 
+  top: 50%; 
+  left: -0.25rem; 
   right: -0.25rem;
-  height: 1px;
+  height: 1px; 
   background-color: var(--color-text-dark);
+  transform-origin: left center;
+  animation: linha-trajetoria 1.2s ease both;
+
+ }
+
+.trajetoria-item:first-child .trajetoria-marcador::before { 
+  left: 50%; 
 }
 
-/* a linha começa no primeiro ponto e termina no último */
-.trajetoria-item:first-child .trajetoria-marcador::before {
-  left: 50%;
-}
-
-.trajetoria-item:last-child .trajetoria-marcador::before {
+.trajetoria-item:last-child .trajetoria-marcador::before { 
   right: 50%;
-}
+ }
 
-.trajetoria-ponto {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0.8rem;
-  height: 0.8rem;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  border: 1px solid var(--color-text-dark);
-  border-radius: 50%;
-}
+.trajetoria-ponto { position: absolute;
+   top: 50%; 
+   left: 50%;
+   width: 0.8rem; 
+   height: 0.8rem; 
+   transform: translate(-50%, -50%); 
+   background-color: #fff; 
+   border: 1px solid var(--color-text-dark); 
+   border-radius: 50%;
+    transition: 
+    background-color 0.3s ease, 
+    scale 0.3s ease;
+   }
 
-.trajetoria-item h3 {
-  margin: 0 0 0.35rem;
+.trajetoria-item:hover .trajetoria-ponto { 
+  background-color: var(--color-orange); 
+  scale: 1.2;
+ }
+
+.trajetoria-item h3 { margin: 0 0 0.35rem; 
   font-size: 0.95rem;
-}
+ }
 
-.trajetoria-item p {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 0.90rem;
+.trajetoria-item p { margin: 0; 
+  color: rgba(255, 255, 255, 0.95); 
+  font-size: 0.9rem; 
   line-height: 1.4;
+ }
+
+@keyframes trajetoria-entrada { from { opacity: 0; 
+  translate: 0 12px; 
 }
 
-/* em telas menores a linha do tempo vira uma grade simples, sem a linha */
-@media (max-width: 900px) {
-  .trajetoria-lista {
-    grid-template-columns: repeat(2, 1fr) !important;
-    row-gap: 1.75rem;
+to { opacity: 1; 
+  translate: 0 0; } 
+}
+
+@media (max-width: 900px) { .trajetoria-lista { 
+  display: flex; 
+  flex-direction: column;
+  gap: 1.5rem; }
+
+.trajetoria-item { position: relative; 
+  text-align: left; 
+  padding-left: 2rem;
+ }
+
+.trajetoria-ano { 
+  margin-bottom: 0.5rem; 
+}
+
+
+
+.trajetoria-marcador { 
+  position: absolute; 
+  top: 0; 
+  bottom: -1.8rem; 
+  left: 0.35rem; 
+  width: 1rem; 
+  height: auto; 
+  margin: 0; 
+}
+
+.trajetoria-marcador::before { 
+  display: block; 
+  top: 0.4rem; 
+  bottom: 0;
+  left: 0.35rem; 
+  right: auto; 
+  width: 1px; 
+  height: auto; 
+  transform-origin: center-top;
+  animation-name: linha-trajetoria-mobile;
+}
+
+.trajetoria-item:first-child .trajetoria-marcador::before, .trajetoria-item:last-child .trajetoria-marcador::before { 
+  left: 0.35rem; 
+  right: auto;
+ }
+
+.trajetoria-ponto { 
+  top: 0.4rem; 
+  left: 0.35rem; }
+
+.trajetoria-item:last-child .trajetoria-marcador {
+   bottom: 0; } 
   }
 
-  .trajetoria-marcador::before {
-    display: none;
+@media (prefers-reduced-motion: reduce) { .trajetoria-item { 
+  animation: none; 
+
+  .trajetoria-marcador::before{
+    animation: none;
+    transform: none;
+  }
+
+  .trajetoria-ponto{
+    transition: none;
   }
 }
 
-@media (max-width: 520px) {
-  .trajetoria-lista {
-    grid-template-columns: 1fr !important;
+@keyframes linha-trajetoria{
+  from{
+    transform: scaleX(0);
   }
+
+  to{
+    transform: scaleX(1);
+  }
+}
+
+@keyframes linha-trajetoria-mobile{
+  from{
+    transform: scaleY(0);
+
+  }
+
+  to{
+    transform: scaleY(1);
+  }
+}
+
+
 }

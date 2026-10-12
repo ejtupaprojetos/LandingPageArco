@@ -35,7 +35,9 @@
   align-items: center;
   text-align: center;
   margin-top: -1rem;
+
 }
+
 
 .diretoria-destaque-foto {
   width: 15rem;
@@ -70,7 +72,17 @@
   position: relative;
   height: 1px;
   margin: 2rem 0;
+  background-color: transparent;
+}
+
+.diretoria-divisor::before{
+  content: '';
+  position: absolute;
+  inset: 0;
   background-color: #ddd;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.6s ease;
 }
 
 .diretoria-divisor::after {
@@ -80,9 +92,19 @@
   left: 50%;
   width: 0.5rem;
   height: 0.5rem;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0);
   background-color: var(--color-yellow);
   border-radius: 50%;
+  transition: transform 0.3s ease 0.4s;
+}
+
+.diretoria-divisor.visivel::before{
+  transform: scaleX(1);
+
+}
+
+.diretoria-divisor.visivel::after{
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .diretoria-grid {
@@ -97,6 +119,12 @@
   background-color: #fff;
   border-radius: var(--radius-md);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.diretoria-card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
 }
 
 .diretoria-card-foto {
@@ -129,5 +157,9 @@
 @media (max-width: 480px) {
   .diretoria-grid {
     grid-template-columns: 1fr;
+  }
+
+  .diretoria-destaque{
+    margin-top: 1.5rem;
   }
 }
