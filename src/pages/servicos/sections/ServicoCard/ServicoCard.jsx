@@ -77,9 +77,11 @@ function ServicoCard({ servico }) {
         </span>
         <h3>{titulo}</h3>
         <p>{descricao}</p>
-        <ul>
+        <ul className="servico-card-itens">
           {itens.map((item) => (
-            <li key={item}>{item}</li>
+            <li className="servico-card-item" key= {item}>
+              {item}
+            </li>
           ))}
         </ul>
       </div>
