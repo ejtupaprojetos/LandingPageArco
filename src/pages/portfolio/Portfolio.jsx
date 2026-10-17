@@ -6,14 +6,14 @@ import PortfolioCard from './sections/PortfolioCard/PortfolioCard'
 import './Portfolio.css'
 
 // Imagens de cada projeto
-import barbeariaImg from '../../assets/images/portfolio/barbearia_don_luiz.png'
-import depyllareImg from '../../assets/images/portfolio/depyllare.png'
-import serpanImg from '../../assets/images/portfolio/panificadora_serpan.png'
-import bareJuniorImg from '../../assets/images/portfolio/bare_junior.png'
-import miranteImg from '../../assets/images/portfolio/projeto_mirante.png'
-import agexcomImg from '../../assets/images/portfolio/agexcom.jpg'
-import queroPapierImg from '../../assets/images/portfolio/quero_papier.png'
-import santaPreguicaImg from '../../assets/images/portfolio/santa_preguica.jpg'
+import barbeariaImg from '../../assets/images/portfolio/barbearia_don_luiz.webp'
+import depyllareImg from '../../assets/images/portfolio/depyllare.webp'
+import serpanImg from '../../assets/images/portfolio/panificadora_serpan.webp'
+import bareJuniorImg from '../../assets/images/portfolio/bare_junior.webp'
+import miranteImg from '../../assets/images/portfolio/projeto_mirante.webp'
+import agexcomImg from '../../assets/images/portfolio/agexcom.webp'
+import queroPapierImg from '../../assets/images/portfolio/quero_papier.webp'
+import santaPreguicaImg from '../../assets/images/portfolio/santa_preguica.webp'
 
 // As categorias das abas Interface já existe mas ainda não possui um projeto nela
 // é so colocar no array de projetos na cat interface  

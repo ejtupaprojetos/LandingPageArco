@@ -3,11 +3,11 @@ import { useEffect , useRef, useState, } from 'react'
 import './Diretoria.css'
 
 // import das fotos
-import diretoraImg from '../../../../assets/images/sobre/diretoria/paula.jpg'
-import jeaneImg from '../../../../assets/images/sobre/diretoria/jeane.jpg'
-import luizImg from '../../../../assets/images/sobre/diretoria/luiz.jpg'
-import evelynImg from '../../../../assets/images/sobre/diretoria/evelyn.jpg'
-import paulaImg from '../../../../assets/images/sobre/diretoria/paula.jpg'
+import diretoraImg from '../../../../assets/images/sobre/diretoria/paula.webp'
+import jeaneImg from '../../../../assets/images/sobre/diretoria/jeane.webp'
+import luizImg from '../../../../assets/images/sobre/diretoria/luiz.webp'
+import evelynImg from '../../../../assets/images/sobre/diretoria/evelyn.webp'
+import paulaImg from '../../../../assets/images/sobre/diretoria/paula.webp'
 
 // Destaque no topo (a diretora)
 const diretora = {
