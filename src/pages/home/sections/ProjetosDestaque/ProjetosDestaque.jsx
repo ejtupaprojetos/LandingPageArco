@@ -1,8 +1,8 @@
 import './ProjetosDestaque.css'
-import agexImg from '../../../../assets/images/agex_con.png'
-import bareImg from '../../../../assets/images/bare_jr.png'
-import miranteImg from '../../../../assets/images/mirante.png'
-import queroImg from '../../../../assets/images/quero_papier.png'
+import agexImg from '../../../../assets/images/agex_con.webp'
+import bareImg from '../../../../assets/images/bare_jr.webp'
+import miranteImg from '../../../../assets/images/mirante.webp'
+import queroImg from '../../../../assets/images/quero_papier.webp'
 
 const projetos = [
   { id: 'agexcom', categoria: 'Arquitetura', titulo: 'Agexcom', imagem: agexImg },

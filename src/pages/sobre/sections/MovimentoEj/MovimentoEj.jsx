@@ -1,5 +1,5 @@
 import './MovimentoEj.css'
-import movimentoImg from '../../../../assets/images/sobre/movimento_ej.jpg'
+import movimentoImg from '../../../../assets/images/sobre/movimento_ej.webp'
 import logoMovimento from '../../../../assets/images/sobre/logo_movimento_ej.png'
 import logoBrasilJunior from '../../../../assets/images/sobre/logo_brasil_junior.png'
 

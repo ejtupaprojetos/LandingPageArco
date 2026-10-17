@@ -1,5 +1,5 @@
 import './Hero.css'
-import homeImage from '../../../../assets/images/home_image_02.png'
+import homeImage from '../../../../assets/images/home_image_02.webp'
 
 function Hero() {
   return (

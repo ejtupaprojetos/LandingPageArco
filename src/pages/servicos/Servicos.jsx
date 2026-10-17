@@ -15,12 +15,12 @@ import iconPromocionais from '../../assets/icons/servicos_t5.png'
 // Cada serviço pode ter mais de uma imagem: é só colocar vários caminhos no
 // array `imagens` do serviço (ex: [imagem1, imagem2, imagem3]) que o
 // carrossel (as bolinhas) aparece sozinho no ServicoCard.
-import identidadeImg1 from '../../assets/images/servicos/identidade_visual_1.jpg'
-import projetoArqImg1 from '../../assets/images/servicos/projeto_arquitetonico_1.jpg'
-import interfaceImg1 from '../../assets/images/servicos/interface_1.png'
-import consultoriaImg1 from '../../assets/images/servicos/consultoria_1.jpg'
-import reformaImg1 from '../../assets/images/servicos/reforma_1.jpg'
-import promocionaisImg1 from '../../assets/images/servicos/promocionais_1.jpg'
+import identidadeImg1 from '../../assets/images/servicos/identidade_visual_1.webp'
+import projetoArqImg1 from '../../assets/images/servicos/projeto_arquitetonico_1.webp'
+import interfaceImg1 from '../../assets/images/servicos/interface_1.webp'
+import consultoriaImg1 from '../../assets/images/servicos/consultoria_1.webp'
+import reformaImg1 from '../../assets/images/servicos/reforma_1.webp'
+import promocionaisImg1 from '../../assets/images/servicos/promocionais_1.webp'
 
 // `layout: 'horizontal'` = card "destaque", ocupando a linha toda.
 // `imagePosition` só importa quando o layout é 'horizontal' ('left' ou 'right').

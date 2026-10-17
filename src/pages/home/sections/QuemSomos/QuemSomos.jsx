@@ -1,5 +1,5 @@
 import './QuemSomos.css'
-import equipeFoto from '../../../../assets/images/quem_somos_01.jpg'
+import equipeFoto from '../../../../assets/images/quem_somos_01.webp'
 
 function QuemSomos() {
   return (

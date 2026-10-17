@@ -1,5 +1,5 @@
 import './NossaHistoria.css'
-import historiaImg from '../../../../assets/images/sobre/nossa_historia_1.jpg'
+import historiaImg from '../../../../assets/images/sobre/nossa_historia_1.webp'
 
 function NossaHistoria() {
   return (
