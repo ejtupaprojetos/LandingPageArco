@@ -15,10 +15,10 @@ const marcos = [
     titulo: 'Baré Júnior',
     descricao: 'No dia 28 de dezembro a Arco foi federada pela Baré Júnior.',
   },
-  { ano: 'Ano', titulo: 'Fato temporal', descricao: 'Descrição breve do fato aqui.' },
-  { ano: 'Ano', titulo: 'Fato temporal', descricao: 'Descrição breve do fato aqui.' },
-  { ano: 'Ano', titulo: 'Fato temporal', descricao: 'Descrição breve do fato aqui.' },
-  { ano: 'Ano', titulo: 'Fato temporal', descricao: 'Descrição breve do fato aqui.' },
+  { ano: '2018', titulo: 'EJ de Alto Crescimento', descricao: 'A ARCO bateu a meta de Alto Crescimento, comprovando sua evolução nos resultados e na vivência empresarial dentro do Movimento Empresa Júnior.' },
+  { ano: '2021', titulo: 'Troféu Empresa Junior Reviravolta', descricao: 'A ARCO foi distinguida com este troféu no Prêmio Baré, marcando um momento de superação e retoma de destaque no estado do Amazonas.' },
+  { ano: '2023', titulo: 'Empresa Júnior Inspiradora', descricao: 'A ARCO recebeu a placa de reconhecimento máximo no Prêmio Baré por ser a Empresa Júnior com maior influência e referência em colaboratividade na rede amazonense.' },
+  { ano: '2025', titulo: 'Reconhecimento "EJ no Verde" no Amazônidas', descricao: 'A empresa foi reconhecida no palco do evento Amazônidas por alcançar os seus resultados e bater as metas estabelecidas até abril de 2025.' },
 ]
 
 function Trajetoria() {
