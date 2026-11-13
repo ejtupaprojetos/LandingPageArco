@@ -26,23 +26,16 @@ const depoimentos = [
   {
     id: 4,
     texto:
-      'A ARCO transformou completamente minha loja. O projeto arquitetônico superou todas as expectativas!',
-    nome: 'Maria Silva',
-    cargo: 'Empresária',
+      'Gente, o material está impecável. Acabei de dar uma olhada com mais calma. Gostaria de agradecer vocês pelo trabalho, dedicação e pelo empenho em fazerem parte dessa reformulação que estamos fazendo pelo nosso esporte e pela nossa universidade.',
+    nome: 'Lucas Robson',
+    cargo: 'Professor de Educação Física · Projeto de Design',
   },
   {
     id: 5,
     texto:
-      'O design gráfico criado pela equipe deu uma identidade profissional à nossa startup. Recomendo!',
-    nome: 'João Santos',
-    cargo: 'Fundador · TechStart',
-  },
-   {
-    id: 6,
-    texto:
-      'Trabalho impecável no desenvolvimento do nosso site. Equipe comprometida e criativa.',
-    nome: 'Ana Costa',
-    cargo: 'Diretora de Marketing',
+      'Contratamos a empresa junior de design Arco, para desenvolver a identidade visual completa do novo museu de Geociencias da UFAM, e para criar infográficos para serem colados e usados no museu. Ambos os serviços foram feitos com profissionalismo, cordialidade e pontualidade. Vale destacar que houve momentos que foram necessárias várias reuniões para ajustes e durante todo este processo, que durou quase 1 ano, os colaboradores da empresa foram muito prestativos e pacientes. Para todos os serviços, foram gerados orçamentos e contratos prévios e, após as entregas, foram geradas notas ficais dos serviços executados. Assim, recomendo os serviços da Arco e dou 5 estrelas de um total de 5 por tudo.',
+    nome: 'Tiago Felipe Arruda Maia',
+    cargo: 'Professor e Coordenador de geologia da UFAM',
   },
 ]
 
@@ -146,7 +139,21 @@ function Depoimentos() {
               key={depoimento.id}
               className="depoimento-card"
             >
-              <p>“{depoimento.texto}”</p>
+              <p
+                onScroll={(e) => {
+                  const elemento = e.currentTarget;
+
+                  elemento.classList.add('scrolling');
+
+                  clearTimeout(elemento.scrollTimeout);
+
+                  elemento.scrollTimeout = setTimeout(() => {
+                    elemento.classList.remove('scrolling');
+                  }, 700);
+                }}
+              >
+                “{depoimento.texto}”
+              </p>
 
               <footer>
                 <strong>{depoimento.nome}</strong>
