@@ -16,11 +16,25 @@ import iconPromocionais from '../../assets/icons/servicos_t5.png'
 // array `imagens` do serviço (ex: [imagem1, imagem2, imagem3]) que o
 // carrossel (as bolinhas) aparece sozinho no ServicoCard.
 import identidadeImg1 from '../../assets/images/servicos/identidade_visual_1.webp'
+import identidadeImg2 from '../../assets/images/servicos/identidade_visual_2.webp'
+import identidadeImg3 from '../../assets/images/servicos/identidade_visual_3.webp'
+import identidadeImg4 from '../../assets/images/servicos/identidade_visual_4.webp'
+
 import projetoArqImg1 from '../../assets/images/servicos/projeto_arquitetonico_1.webp'
+import projetoArqImg2 from '../../assets/images/servicos/projeto_arquitetonico_2.webp'
+
 import interfaceImg1 from '../../assets/images/servicos/interface_1.webp'
+import interfaceImg2 from '../../assets/images/servicos/interface_2.webp'
+import interfaceImg3 from '../../assets/images/servicos/interface_3.webp'
+
 import consultoriaImg1 from '../../assets/images/servicos/consultoria_1.webp'
+
 import reformaImg1 from '../../assets/images/servicos/reforma_1.webp'
+
 import promocionaisImg1 from '../../assets/images/servicos/promocionais_1.webp'
+import promocionaisImg2 from '../../assets/images/servicos/promocionais_2.webp'
+import promocionaisImg3 from '../../assets/images/servicos/promocionais_3.webp'
+import promocionaisImg4 from '../../assets/images/servicos/promocionais_4.webp'
 
 // `layout: 'horizontal'` = card "destaque", ocupando a linha toda.
 // `imagePosition` só importa quando o layout é 'horizontal' ('left' ou 'right').
@@ -37,7 +51,7 @@ const servicos = [
       'Coerência visual em todos os pontos',
       'Reconhecimento e diferenciação',
     ],
-    imagens: [identidadeImg1, identidadeImg1, identidadeImg1],
+    imagens: [identidadeImg1, identidadeImg2, identidadeImg3, identidadeImg4],
   },
   {
     id: 'projeto-arquitetonico',
@@ -51,7 +65,7 @@ const servicos = [
       'Funcionalidade, estética e conforto',
       'Projetos pensados para uso real',
     ],
-    imagens: [projetoArqImg1, projetoArqImg1, projetoArqImg1],
+    imagens: [projetoArqImg1, projetoArqImg2],
   },
   {
     id: 'interface',
@@ -61,7 +75,7 @@ const servicos = [
     titulo: 'Interface',
     descricao: 'Criamos um layout único para o seu site ou aplicativo em desenvolvimento!',
     itens: ['Experiência do usuário (UX)', 'Interfaces funcionais e intuitivas', 'Layouts responsivos'],
-    imagens: [interfaceImg1, interfaceImg1, interfaceImg1],
+    imagens: [interfaceImg1, interfaceImg2, interfaceImg3],
   },
   {
     id: 'consultoria',
@@ -75,7 +89,7 @@ const servicos = [
       'Melhor aproveitamento do ambiente',
       'Redução de erros antes da execução',
     ],
-    imagens: [consultoriaImg1, consultoriaImg1, consultoriaImg1],
+    imagens: [consultoriaImg1],
   },
   {
     id: 'reforma',
@@ -88,7 +102,7 @@ const servicos = [
       'Melhorias estéticas e funcionais',
       'Transformação sem desperdícios',
     ],
-    imagens: [reformaImg1, reformaImg1, reformaImg1],
+    imagens: [reformaImg1],
   },
   {
     id: 'promocionais',
@@ -99,7 +113,7 @@ const servicos = [
     descricao:
       'Produzimos material gráfico como panfletos, apresentações e postagens para promover o seu produto ou marca da melhor forma!',
     itens: ['Materiais impressos e digitais', 'Comunicação visual estratégica', 'Conteúdos alinhados à marca'],
-    imagens: [promocionaisImg1, promocionaisImg1, promocionaisImg1],
+    imagens: [promocionaisImg1, promocionaisImg2, promocionaisImg3, promocionaisImg4],
   },
 ]
 
